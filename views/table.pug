@@ -1,0 +1,28 @@
+extends layout
+block content
+    .col-md-12.search-table-col
+      span.counter.pull-right
+      .table-responsive.table-bordered.table.table-hover.table-bordered.results
+        table.table.table-bordered.table-hover
+          thead.bill-header.cs
+            tr
+              th#colh1.col-lg-1 S.No
+              th#colh2.col-lg-2 Name
+              th#colh3.col-lg-3 Price
+              th#colh4.col-lg-2 Category
+              th#colh5.col-lg-2 Action
+          tbody
+            tr.warning.no-result
+              td(colspan='4')
+                i.fa.fa-warning
+                | &nbsp; No Result !!!
+            tr
+              td#r2col1 01
+              td#r2col2 India
+              td#r2col3 Souvik Kundu
+              td#r2col4 Bootstrap Stuido
+              td
+                button.btn.btn-success(type='submit' style='margin-left: 5px;')
+                  i.fa.fa-check(style='font-size: 15px;')
+                button.btn.btn-danger(type='submit' style='margin-left: 5px;')
+                  i.fa.fa-trash(style='font-size: 15px;')

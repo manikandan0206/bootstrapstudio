@@ -1,0 +1,136 @@
+html
+  head(lang='en')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+    title demo
+    link(rel='stylesheet', href='bootstrap.min.css')
+    link(rel='stylesheet', href='styles.css')
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    link(rel='stylesheet', href='bootstrap.min.css')
+    link(rel='stylesheet', href='Login-Form-Clean.css')
+    link(rel='stylesheet', href='Navigation-Clean.css')
+
+
+    link(rel='stylesheet' href='Registration-Form-with-Photo.css')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+
+
+    style.
+       #House-icon {
+                  background-image: url("https://s3.ap-south-1.amazonaws.com/namakkalproperty/house.png");
+                  /* Change url to wanted image */
+                  background-size: cover;
+                  border: none;
+                  width: 32px;
+                  height: 32px;
+                  cursor: pointer;
+                  color: transparent;
+                  }
+       #Land-icon {
+                       background-image: url("https://s3.ap-south-1.amazonaws.com/namakkalproperty/Land.png");
+                       /* Change url to wanted image */
+                       background-size: cover;
+                       border: none;
+                       width: 32px;
+                       height: 32px;
+                       cursor: pointer;
+                       color: transparent;
+                   }
+       #Commercial-icon {
+                       background-image: url("https://s3.ap-south-1.amazonaws.com/namakkalproperty/Commercial.png");
+                       /* Change url to wanted image */
+                       background-size: cover;
+                       border: none;
+                       width: 32px;
+                       height: 32px;
+                       cursor: pointer;
+                       color: transparent;
+                   }
+       #Agent-icon {
+                       background-image: url("https://s3.ap-south-1.amazonaws.com/namakkalproperty/Agent.png");
+                       /* Change url to wanted image */
+                       background-size: cover;
+                       border: none;
+                       width: 32px;
+                       height: 32px;
+                       cursor: pointer;
+                       color: transparent;
+
+                   }
+       #apps {
+         width: 300px;
+       }
+
+
+  body
+    div
+      nav.navbar.navbar-light.navbar-expand-lg.navigation-clean
+        .container
+          a.navbar-brand(href='/') Namakkal Property
+          button.navbar-toggler(data-toggle='collapse', data-target='#navcol-1')
+            span.sr-only Toggle navigation
+            span.navbar-toggler-icon
+          #navcol-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.nav-item(role='presentation')
+                a.nav-link.active(href='/homelist') Buy
+              li.nav-item(role='presentation')
+                a.nav-link(href='/rent') Rent
+              li.nav-item(role='presentation')
+                a.nav-link(href='/Newdevelopment') New Property
+            ul.nav.navbar-nav.ml-auto
+              li.nav-item.dropdown
+                 a.nav-link(data-toggle='dropdown', aria-expanded='false', href='#') +ADD
+                    .dropdown-menu(role='menu')
+
+                          a.dropdown-item(role='presentation', href='/users/Sell_rent_property') New listing
+                          a.dropdown-item(role='presentation', href='/business/business') New Organization
+
+              li.dropdown.nav-item
+                a.dropdown-toggle.nav-link(data-toggle='dropdown', aria-expanded='false', href='#')
+                  i.fa.fa-th(style="margin-top:5px;")
+                #apps.dropdown-menu(role='menu')
+                   .row
+                        .col-sm-1(style="padding-top:0px!important;padding-bottom:0px!important;")
+                        .col-sm-5(style='padding-left:30px;padding-left:30px;margin:2px;padding-top:0px!important;padding-bottom:0px!important;')
+                             form(method="POST",action="/app")
+                                 input.appcheck.House(type='hidden',name='Apps1',value='House')
+                                 br
+                                 input.btn.btn-default(type="submit",style='padding:30px;margin:2px;background-color:white',id="House-icon")
+                                 p(id="House") &nbsp; House
+
+                        .col-sm-5(style='padding-left:30px;padding-left:30px;margin:2px;padding-top:0px!important;padding-bottom:0px!important;')
+                           form(method="POST",action="/app")
+                               input.appcheck(type='hidden',name='Apps1',value='Residential Land' class="Residential Land")
+                               br
+                               input.btn.btn-default(type="submit",style='padding:30px;margin:2px;background-color:white',id="Land-icon")
+                               p(id="Residential Land") &nbsp; Land
+                        .col-sm-1(style="padding-top:0px!important;padding-bottom:0px!important;")
+                   .row
+                           .col-sm-1(style="padding-top:0px!important;padding-bottom:0px!important;")
+                           .col-sm-5(style='padding-left:30px;padding-left:30px;margin:2px;padding-top:0px!important;padding-bottom:0px!important;')
+                                form(method="POST",action="/app")
+                                    input.appcheck.Commercial(type='hidden',name='Apps1',value='Commercial')
+                                    br
+                                    input.btn.btn-default(type="submit",style='padding:30px;margin:2px;background-color:white',id="Commercial-icon")
+                                    p#Commercial Commercial
+                           .col-sm-5(style='padding-left:30px;padding-left:30px;margin:2px;padding-top:26px!important;padding-bottom:0px!important;')
+                                a(href="/business/agentlist")
+                                    input.btn.btn-default(type="submit",style='padding:30px;margin:2px;background-color:white',id="Agent-icon")
+                                    p(id="Residential Land") &nbsp; Agent
+                           .col-sm-1(style="padding-top:26px!important;padding-bottom:0px!important;")
+              li.nav-item(role='presentation')
+                a.nav-link(href='/signin') Signin
+              li.nav-item(role='presentation')
+                a.nav-link(href='/signup') Create New Account
+block content

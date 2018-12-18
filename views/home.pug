@@ -1,0 +1,25 @@
+extends layout
+block content
+
+    style.
+      section{
+        padding-top:10%;
+      }
+
+
+    section
+          .row
+            .col-xl-12.offset-xl-0
+              h1#title.text-center.text-sm-center.text-md-center.text-lg-center.text-xl-center Find Your Home
+    section1
+        .row(style="padding-bottom:10px;")
+          .col-auto.offset-3.offset-sm-4.offset-md-4.offset-lg-5.offset-xl-5
+            .dropdown
+              button.btn.btn-primary.dropdown-toggle(data-toggle='dropdown', aria-expanded='false', type='button') Choose Your Location
+              .dropdown-menu(role='menu')
+                a.dropdown-item(role='presentation', href='#') First Item
+                a.dropdown-item(role='presentation', href='#') Second Item
+                a.dropdown-item(role='presentation', href='#') Third Item
+                span.dropdown-item-text(role='presentation') Text Item
+            center
+              button.btn.btn-primary(type='button',style="margin-top:5%;") Search
